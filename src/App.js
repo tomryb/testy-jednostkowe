@@ -1,3 +1,4 @@
+import TodosList from "./components/todos/todos";
 import TopBar from "./components/zadanie2/topBar";
 import Footer from "./components/zadanie3/footer";
 import Counter from "./components/zadanie4/counter";
@@ -9,6 +10,7 @@ function App() {
       <TopBar title="test tekst"></TopBar>
       <Counter></Counter>
       <Button></Button>
+      <TodosList></TodosList>
       <Footer></Footer>
     </div>
   );
