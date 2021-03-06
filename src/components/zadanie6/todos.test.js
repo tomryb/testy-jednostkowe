@@ -1,37 +1,35 @@
-import React from "react";
-import { render, screen, act } from "@testing-library/react";
-import TodosList from "./todos";
+import { render, screen, act } from '@testing-library/react';
+import TodosList from './todos';
 
-const mockResponse = [
-  {
-    id: 1,
-    title: "Example 1",
-  },
-];
+const mockResponse = [{
+  id: 1,
+  title: 'example title 1',
+}];
 
-beforeAll(() => jest.spyOn(window, "fetch"));
 
-describe("TodoList.js", () => {
+describe('TodosList.js', () => {
   beforeEach(() => {
-    jest.spyOn(global, "fetch").mockResolvedValue({
-      json: jest.fn().mockResolvedValue(mockResponse),
-    });
+    jest.spyOn(global, 'fetch').mockResolvedValue({
+      json: jest.fn().mockResolvedValue(mockResponse)
+    })
   });
-
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it("should working for example response", async () => {
-    await act(async () => {
-      render(<TodosList />);
-    });
-
-    const todoListNames = screen
-      .getAllByTestId("todoListElement")
-      .map((div) => div.textContent);
-    const expectedResult = mockResponse.map((element) => element.title);
-
-    expect(expectedResult).toEqual(todoListNames);
+  it('should display loader', async () => {
+    render(<TodosList />);
+    const loaderElement = screen.getByTestId('todosLoader');
+    expect(loaderElement).toBeTruthy()
   });
-});
+
+  it('should display example data from api', async () => {
+    await act(async () => {
+      render(<TodosList/>);
+    });
+    const todosListNames = screen.getAllByTestId('todoListElement').map(div => div.textContent);
+    const expectedResult = mockResponse.map(element => element.title);
+
+    expect(todosListNames).toEqual(expectedResult);
+  })
+})
