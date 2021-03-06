@@ -1,14 +1,15 @@
-import "./App.css";
-import TopBar from "./components/topBar/topBar_zadanie2";
-import Footer from "./components/footer/footer_zadanie3";
-import Counter from "./components/counter/counter_zadanie4";
+import TopBar from "./components/zadanie2/topBar";
+import Footer from "./components/zadanie3/footer";
+import Counter from "./components/zadanie4/counter";
+import Button from './components/zadanie5/button';
 
 function App() {
   return (
     <div className="App">
       <TopBar title="test tekst"></TopBar>
-      <Footer></Footer>
       <Counter></Counter>
+      <Button></Button>
+      <Footer></Footer>
     </div>
   );
 }

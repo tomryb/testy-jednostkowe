@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import Footer from './footer_zadanie3';
+import Footer from './footer';
 
 describe('Footer.js', () => {
   it('should render website title', () => {
