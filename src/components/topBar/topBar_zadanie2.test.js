@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import TopBar from './topBar';
+import TopBar from './topBar_zadanie2';
 
 describe('TopBar.js', () => {
   it('SHOULD RENDER VALUE FROM PROPS', () => {

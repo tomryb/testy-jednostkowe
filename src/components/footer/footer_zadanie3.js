@@ -1,4 +1,3 @@
-import { date } from 'check-types';
 import React from 'react';
 
 function Footer({title}) {
