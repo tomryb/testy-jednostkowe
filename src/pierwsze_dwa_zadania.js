@@ -75,6 +75,3 @@ TODO:
 // console.log("metoda sub powinna zwrócić string jeśli brak parametru", sub() === "Niepoprawny parametr");
 
 // //mnożenie i dzielenie na to samo kopyto
-
-TODO:
-//zadanie2
