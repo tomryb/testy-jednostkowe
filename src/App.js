@@ -1,4 +1,4 @@
-import TodosList from "./components/todos/todos";
+import TodosList from "./components/zadanie6/todos";
 import TopBar from "./components/zadanie2/topBar";
 import Footer from "./components/zadanie3/footer";
 import Counter from "./components/zadanie4/counter";
